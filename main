@@ -40,7 +40,6 @@ def save_to_csv(books, filename="recent_books.csv"):
     if not books:
         print("No books found to save.")
         return
-
     keys = books[0].keys()
     try:
         with open(filename, 'w', newline='', encoding='utf-8') as output_file:
@@ -53,5 +52,4 @@ def save_to_csv(books, filename="recent_books.csv"):
 
 if __name__ == "__main__":
     book_data = fetch_recent_books(50)
-    save_to_csv(book_data)
-    
+    save_to_csv(book_data) 
